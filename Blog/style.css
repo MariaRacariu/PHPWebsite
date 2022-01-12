@@ -1,0 +1,77 @@
+/* Fonts:
+Montserrat
+Josefin Sans
+Prompt 
+*/
+body {
+    font-family: montserrat;
+    margin-left: 20px;
+}
+@font-face {
+    font-family: "montserrat";
+    src: url(../fonts/Montserrat-Medium.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+/* =============== Navbar =============== */
+header{
+    display:flex;
+    justify-content: flex-end;
+}
+/* =============== Main =============== */
+main{
+    margin-right: 200px;
+    display: grid;
+    grid-template-columns: 50% 20% 20%;
+    grid-column-gap: 1em;
+}
+.article{
+    display: grid;
+    grid-auto-rows: auto;
+    grid-row-gap: 1em;
+    
+}
+.side-article{
+    display: grid;
+    grid-auto-rows: auto;
+    grid-row-gap: 1em;
+    align-content: right;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.date{
+    color:blue;
+}
+.continue-button{
+    text-decoration: none;
+}
+/* =============== Footer =============== */
+.footer {
+    position: fixed;
+
+    right: 2em;
+    bottom: 2em;
+}
+.footer > div > a {
+    text-decoration: none;
+}
+/* =============== Responsive/@media =============== */
+@media (max-width: 1500px){
+    .article{
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .side-article{
+        display:grid;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+}
+@media (max-width: 767px){
+    header{
+    justify-content: center;
+    }
+    .nav-item > a {
+    text-align: center;
+    }
+}
